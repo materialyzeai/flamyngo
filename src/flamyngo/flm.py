@@ -9,16 +9,16 @@ import argparse
 import os
 import time
 import webbrowser
+from multiprocessing import Process
 
 
 def run_server(args):
     """Run server."""
     os.environ["FLAMYNGO"] = args.config
-    from flamyngo.app import app
+    # Deferred: flamyngo.app reads the FLAMYNGO env var at import time.
+    from flamyngo.app import app  # noqa: PLC0415
 
     if args.browser:
-        from multiprocessing import Process
-
         p = Process(
             target=app.run,
             kwargs={"debug": args.debug, "host": args.host, "port": args.port},
