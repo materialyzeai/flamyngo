@@ -3,7 +3,7 @@ name = "flamyngo"
 version = "1.2.1"
 description = "Flamyngo is a customizable Flask frontend for MongoDB."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.0",
     "monty>=2025.3.3",
@@ -18,8 +18,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Information Analysis",
